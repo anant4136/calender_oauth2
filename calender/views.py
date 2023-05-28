@@ -60,7 +60,7 @@ class GoogleCalendarInitView(APIView):
         request.session['oauth_state'] = state
         request.session['temp_file_path'] = temp_file_path
 
-        return HttpResponse(authorization_url)
+        return HttpResponseRedirect(authorization_url)
 
 
 class GoogleCalendarRedirectView(APIView):
